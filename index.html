@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hosting4half.com — WordPress Hosting at Half the Price</title>
+<meta name="description" content="We audit your WordPress hosting bill and cut it in half. Free hosting review — if we can't save you 40%+, we'll tell you that too.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="hero-bg">
+.hero { background-image: linear-gradient(135deg, rgba(5,11,18,0.92) 0%, rgba(5,11,18,0.85) 50%, rgba(10,26,48,0.9) 100%), url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1920&q=80&auto=format&fit=crop'); background-size: cover; background-position: center; background-attachment: fixed; }
+</style>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#050B12;color:#F8FAFC;line-height:1.6;overflow-x:hidden}
+:root{
+--dark-1:#050B12;--dark-2:#07111D;--dark-3:#0A1624;--dark-4:#0D1F30;
+--cyan:#00D4FF;--cyan-dim:rgba(0,212,255,0.15);
+--teal:#00E6B8;--teal-dim:rgba(0,230,184,0.12);
+--blue:#2563EB;
+--text-light:#F8FAFC;--text-muted:#94A3B8;--text-dark:#111827;
+--section-bg:#F7F8F5;--card-bg:rgba(255,255,255,0.04);
+--card-border:rgba(255,255,255,0.08);--card-border-glow:rgba(0,212,255,0.25);
+--radius-sm:8px;--radius-md:16px;--radius-lg:24px;--radius-pill:999px;
+--shadow-card:0 4px 24px rgba(0,0,0,0.3);--shadow-glow:0 0 30px rgba(0,212,255,0.2);
+--transition:0.3s cubic-bezier(0.4,0,0.2,1)
+}
+h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;line-height:1.15;letter-spacing:-0.02em}
+h1{font-size:clamp(2.4rem,6vw,5rem)}
+h2{font-size:clamp(1.8rem,4vw,3rem)}
+h3{font-size:clamp(1.1rem,2.5vw,1.5rem)}
+p{color:var(--text-muted);line-height:1.75}
+.accent{color:var(--cyan)}.accent-teal{color:var(--teal)}
+.gradient-text{background:linear-gradient(135deg,#00D4FF 0%,#00E6B8 60%,#7C3AED 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section-pad{padding:100px 0}.section-pad-sm{padding:64px 0}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.flex-center{display:flex;align-items:center;justify-content:center}
+.flex-between{display:flex;align-items:center;justify-content:space-between}
+.text-center{text-align:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius-pill);font-family:'Inter',sans-serif;font-weight:600;font-size:0.95rem;letter-spacing:0.01em;text-decoration:none;cursor:pointer;border:none;outline:none;transition:var(--transition);white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,#00D4FF,#00E6B8);color:#050B12;box-shadow:0 0 20px rgba(0,212,255,0.35),0 4px 15px rgba(0,0,0,0.2)}
+.btn-primary:hover{box-shadow:0 0 40px rgba(0,212,255,0.6),0 6px 20px rgba(0,0,0,0.25);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--text-light);border:1.5px solid rgba(255,255,255,0.2);backdrop-filter:blur(8px)}
+.btn-outline:hover{border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 15px rgba(0,212,255,0.15);transform:translateY(-2px)}
+.btn-lg{padding:18px 38px;font-size:1.05rem}
+.btn-sm{padding:10px 20px;font-size:0.85rem}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 24px;height:72px;display:flex;align-items:center;background:rgba(5,11,18,0.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);transition:background var(--transition)}
+.nav-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--text-light);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#00D4FF,#00E6B8);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:#050B12}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color var(--transition)}
+.nav-links a:hover{color:var(--text-light)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-hamburger span{width:22px;height:2px;background:var(--text-muted);border-radius:2px;transition:var(--transition)}
+</style>
+<style>
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse 130% 90% at 50% -5%,#0A2A40 0%,#050B12 65%);padding-top:72px}
+.hero-orbs{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.3;animation:orbFloat 14s ease-in-out infinite}
+.orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(0,212,255,0.5),transparent 70%);top:-200px;right:-80px;animation-duration:14s}
+.orb-2{width:450px;height:450px;background:radial-gradient(circle,rgba(0,230,184,0.4),transparent 70%);bottom:-80px;left:0;animation-duration:18s;animation-delay:-6s}
+.orb-3{width:350px;height:350px;background:radial-gradient(circle,rgba(37,99,235,0.45),transparent 70%);top:25%;left:25%;animation-duration:22s;animation-delay:-10s}
+@keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(25px,-35px) scale(1.05)}66%{transform:translate(-20px,15px) scale(0.97)}}
+.hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(0,212,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.04) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:radial-gradient(ellipse 100% 100% at 50% 50%,black 20%,transparent 75%);mask-image:radial-gradient(ellipse 100% 100% at 50% 50%,black 20%,transparent 75%)}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:60px 24px 100px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-left{display:flex;flex-direction:column;gap:28px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:var(--radius-pill);border:1px solid rgba(0,212,255,0.3);background:rgba(0,212,255,0.06);font-size:0.8rem;font-weight:600;color:var(--cyan);letter-spacing:0.05em;width:fit-content}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+.hero-headline{color:var(--text-light)}
+.hero-sub{font-size:1.05rem;line-height:1.8;color:rgba(255,255,255,0.58);max-width:480px}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:36px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.08);margin-top:4px}
+.hero-stat{display:flex;flex-direction:column;gap:2px}
+.hero-stat-num{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--text-light)}
+.hero-stat-label{font-size:0.72rem;color:var(--text-muted);letter-spacing:0.04em;text-transform:uppercase}
+.hero-right{position:relative;display:flex;align-items:center;justify-content:center}
+.globe-wrap{position:relative;width:440px;height:440px;display:flex;align-items:center;justify-content:center}
+.globe-core{width:240px;height:240px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#1a4a5e 0%,#071520 55%,#040c14 100%);box-shadow:0 0 60px rgba(0,212,255,0.25),0 0 120px rgba(0,212,255,0.1),inset 0 0 40px rgba(0,212,255,0.12);position:relative;z-index:2;overflow:hidden}
+.globe-core::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 14px,rgba(0,212,255,0.07) 14px,rgba(0,212,255,0.07) 15px),repeating-linear-gradient(90deg,transparent,transparent 18px,rgba(0,212,255,0.05) 18px,rgba(0,212,255,0.05) 19px);border-radius:50%}
+.globe-core::after{content:'';position:absolute;width:100%;height:100%;background:radial-gradient(circle at 30% 30%,rgba(0,212,255,0.22) 0%,transparent 55%);border-radius:50%}
+.globe-shine{position:absolute;width:60px;height:60px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.15),transparent 70%);top:20%;left:20%;z-index:3}
+.orbit{position:absolute;border-radius:50%;top:50%;left:50%;transform-origin:0 0}
+.orbit-1{width:310px;height:310px;margin-left:-155px;margin-top:-155px;border:1px solid rgba(0,212,255,0.22);animation:spin 12s linear infinite}
+.orbit-2{width:390px;height:230px;margin-left:-195px;margin-top:-115px;border:1px solid rgba(0,230,184,0.18);animation:spinTilt 18s linear infinite}
+.orbit-3{width:430px;height:430px;margin-left:-215px;margin-top:-215px;border:1px dashed rgba(37,99,235,0.14);animation:spin 28s linear infinite reverse}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes spinTilt{from{transform:rotateX(65deg) rotate(0deg)}to{transform:rotateX(65deg) rotate(360deg)}}
+.orbit-dot{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan),0 0 4px #fff;top:-5px;left:calc(50% - 5px)}
+.orbit-dot-teal{background:var(--teal);box-shadow:0 0 14px var(--teal),0 0 4px #fff}
+.data-pill{position:absolute;background:rgba(7,17,29,0.92);border:1px solid rgba(0,212,255,0.25);border-radius:12px;padding:10px 16px;font-size:0.78rem;font-weight:600;color:var(--text-light);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,0.45);white-space:nowrap;animation:floatBob 6s ease-in-out infinite;z-index:5}
+.dp1{top:12%;left:-8%;animation-delay:0s}.dp2{top:55%;right:-8%;animation-delay:-2s}.dp3{bottom:12%;left:8%;animation-delay:-4s}
+.dp-label{color:var(--text-muted);font-weight:400;font-size:0.7rem;display:block;margin-bottom:3px}
+.dp-value{color:var(--cyan)}
+@keyframes floatBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+</style>
+<style>
+/* Trust bar */
+.trust-bar{background:var(--dark-2);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:28px 0}
+.trust-bar-inner{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;color:var(--text-muted);font-size:0.85rem;font-weight:500}
+.trust-icon{width:36px;height:36px;border-radius:8px;background:var(--cyan-dim);border:1px solid rgba(0,212,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1rem}
+.trust-divider{width:1px;height:28px;background:rgba(255,255,255,0.08)}
+
+/* Sections */
+.section-light{background:var(--section-bg);color:var(--text-dark)}
+.section-light h2,.section-light h3,.section-light h4{color:var(--text-dark)}
+.section-light p{color:#6B7280}
+.section-dark{background:var(--dark-2)}
+.section-darker{background:var(--dark-1)}
+
+/* Section label */
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px}
+.section-label::before{content:'';display:block;width:20px;height:2px;background:var(--cyan);border-radius:2px}
+.section-label-dark{color:var(--text-muted)}
+.section-label-dark::before{background:var(--text-muted)}
+
+/* Feature cards — light bg */
+.feat-card{background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius-lg);padding:36px;transition:var(--transition);box-shadow:0 2px 12px rgba(0,0,0,0.05)}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.1);border-color:#d1d5db}
+.feat-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(0,212,255,0.12),rgba(0,230,184,0.08));border:1px solid rgba(0,212,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:20px}
+.feat-card h4{font-size:1.05rem;color:var(--text-dark);margin-bottom:10px}
+.feat-card p{font-size:0.9rem;line-height:1.7;color:#6B7280}
+
+/* Dark feature cards */
+.feat-card-dark{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:32px;transition:var(--transition)}
+.feat-card-dark:hover{border-color:var(--card-border-glow);box-shadow:0 0 25px rgba(0,212,255,0.1),0 8px 30px rgba(0,0,0,0.3);transform:translateY(-3px)}
+.feat-card-dark h4{color:var(--text-light);margin-bottom:10px}
+.feat-icon-dark{width:48px;height:48px;border-radius:12px;background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:20px}
+
+/* Stat blocks */
+.stat-block{text-align:center;padding:32px}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:800;color:var(--text-light);line-height:1;margin-bottom:8px}
+.stat-num span{font-size:1.8rem;vertical-align:super}
+.stat-label{font-size:0.85rem;color:var(--text-muted);letter-spacing:0.02em}
+
+/* Process steps */
+.step-row{display:flex;gap:24px;margin-bottom:16px;align-items:flex-start}
+.step-num{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#00D4FF,#00E6B8);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:800;color:#050B12;flex-shrink:0;margin-top:2px}
+.step-content h4{color:var(--text-light);margin-bottom:6px;font-size:1rem}
+.step-content p{font-size:0.9rem}
+
+/* Dashboard mockup */
+.dash-wrap{background:rgba(7,17,29,0.8);border:1px solid rgba(0,212,255,0.2);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);backdrop-filter:blur(20px)}
+.dash-bar{background:rgba(0,0,0,0.4);padding:14px 20px;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:8px}
+.dash-dot{width:10px;height:10px;border-radius:50%}
+.dash-body{padding:28px}
+.dash-row{display:flex;gap:16px;margin-bottom:16px}
+.dash-card-sm{flex:1;background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.15);border-radius:10px;padding:16px}
+.dash-card-sm .dc-label{font-size:0.72rem;color:var(--text-muted);margin-bottom:6px}
+.dash-card-sm .dc-val{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text-light)}
+.dash-card-sm .dc-delta{font-size:0.72rem;color:var(--teal)}
+.dash-bar-chart{display:flex;align-items:flex-end;gap:6px;height:60px;padding-top:10px}
+.dbc-bar{flex:1;border-radius:4px 4px 0 0;background:rgba(0,212,255,0.15);transition:var(--transition)}
+.dbc-bar:nth-child(3),.dbc-bar:nth-child(6){background:var(--cyan)}
+.dash-row-info{display:flex;gap:12px;margin-top:4px}
+.dri-item{flex:1;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:12px}
+.dri-item span{font-size:0.72rem;color:var(--text-muted);display:block;margin-bottom:4px}
+.dri-item strong{font-size:0.9rem;color:var(--text-light)}
+
+/* Pricing cards */
+.price-card{background:var(--card-bg);border:1.5px solid var(--card-border);border-radius:var(--radius-lg);padding:40px;position:relative;transition:var(--transition)}
+.price-card.featured{border-color:rgba(0,212,255,0.4);box-shadow:0 0 40px rgba(0,212,255,0.12)}
+.price-card:hover{transform:translateY(-4px)}
+.price-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#00D4FF,#00E6B8);color:#050B12;font-size:0.72rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;padding:6px 20px;border-radius:var(--radius-pill)}
+.price-amount{font-family:'Space Grotesk',sans-serif;font-size:3.5rem;font-weight:800;color:var(--text-light);line-height:1;margin:20px 0 8px}
+.price-amount sup{font-size:1.5rem;vertical-align:super}
+.price-amount sub{font-size:1rem;font-weight:400;color:var(--text-muted)}
+.price-tagline{font-size:0.9rem;color:var(--text-muted);margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.price-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.price-list li{display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--text-muted)}
+.price-check{color:var(--teal);font-size:1rem}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.08);overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--text-light);font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;padding:24px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;transition:color var(--transition)}
+.faq-q:hover{color:var(--cyan)}
+.faq-icon{width:24px;height:24px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;transition:var(--transition)}
+.faq-item.open .faq-icon{transform:rotate(45deg);border-color:var(--cyan);color:var(--cyan)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-inner{padding:0 0 24px;color:var(--text-muted);font-size:0.95rem;line-height:1.75}
+
+/* Calculator */
+.calc-wrap{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:40px;max-width:680px;margin:0 auto}
+.calc-label{display:flex;justify-content:space-between;margin-bottom:12px}
+.calc-label span{font-size:0.9rem;color:var(--text-muted)}
+.calc-label strong{color:var(--text-light);font-size:0.95rem}
+.range-track-wrap{position:relative;padding:10px 0;margin-bottom:8px}
+.range-track{width:100%;height:6px;border-radius:3px;background:rgba(255,255,255,0.1);appearance:none;-webkit-appearance:none;outline:none;cursor:pointer}
+.range-track::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#00D4FF,#00E6B8);box-shadow:0 0 12px rgba(0,212,255,0.5);cursor:grab;margin-top:-9px}
+.range-track::-webkit-slider-runnable-track{background:linear-gradient(to right,var(--cyan) var(--pct,50%),rgba(255,255,255,0.1) var(--pct,50%));height:6px;border-radius:3px}
+.calc-result{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.calc-result-card{background:rgba(0,212,255,0.05);border:1px solid rgba(0,212,255,0.15);border-radius:12px;padding:20px;text-align:center}
+.calc-result-card .cr-label{font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px}
+.calc-result-card .cr-val{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:800;color:var(--text-light)}
+.calc-result-card .cr-val.highlight{color:var(--cyan)}
+.savings-note{margin-top:16px;padding:16px;background:rgba(0,230,184,0.06);border:1px solid rgba(0,230,184,0.2);border-radius:10px;font-size:0.85rem;color:rgba(255,255,255,0.65);text-align:center;min-height:52px}
+
+/* CTA section */
+.cta-section{background:linear-gradient(135deg,#050B12 0%,#071a28 50%,#050B12 100%);position:relative;overflow:hidden;text-align:center;padding:120px 0}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(0,212,255,0.08),transparent 70%)}
+.cta-actions{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:40px}
+
+/* Upload form */
+.upload-zone{border:2px dashed rgba(0,212,255,0.3);border-radius:var(--radius-md);padding:28px;text-align:center;cursor:pointer;transition:var(--transition);background:rgba(0,212,255,0.03)}
+.upload-zone:hover{border-color:var(--cyan);background:rgba(0,212,255,0.06)}
+.upload-icon{font-size:2rem;margin-bottom:8px}
+.upload-zone p{font-size:0.85rem;color:var(--text-muted)}
+input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.form-field{margin-bottom:16px}
+.form-field label{display:block;font-size:0.85rem;color:var(--text-muted);font-weight:500;margin-bottom:6px}
+.form-field input, .form-field select, .form-field textarea{width:100%;background:rgba(255,255,255,0.04);border:1.5px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 16px;color:var(--text-light);font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;transition:border-color var(--transition)}
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,212,255,0.1)}
+.form-field select option{background:#0A1624}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* Footer */
+.footer{background:#02070D;border-top:1px solid rgba(255,255,255,0.06);padding:64px 0 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand{display:flex;flex-direction:column;gap:16px}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--text-light);text-decoration:none;display:flex;align-items:center;gap:10px}
+.footer-lm{width:30px;height:30px;border-radius:7px;background:linear-gradient(135deg,#00D4FF,#00E6B8);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:800;color:#050B12}
+.footer-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.7;max-width:280px}
+.footer-col h5{font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:20px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.footer-col a{color:var(--text-muted);text-decoration:none;font-size:0.88rem;transition:color var(--transition)}
+.footer-col a:hover{color:var(--text-light)}
+.footer-bottom{padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:0.82rem;color:var(--text-muted)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:0.82rem;color:var(--text-muted);text-decoration:none}
+.footer-links a:hover{color:var(--text-light)}
+
+/* Animations */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* Mobile */
+@media(max-width:900px){
+.hero-content{grid-template-columns:1fr;gap:40px;padding:40px 20px 80px}
+.hero-right{display:none}
+.grid-2{grid-template-columns:1fr}
+.grid-3{grid-template-columns:1fr 1fr}
+.grid-4{grid-template-columns:1fr 1fr}
+.nav-links,.nav-cta{display:none}
+.nav-hamburger{display:flex}
+.footer-grid{grid-template-columns:1fr 1fr}
+.trust-bar-inner{gap:24px}
+.form-row{grid-template-columns:1fr}
+.calc-result{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+.grid-3,.grid-4{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr}
+.hero-stats{flex-wrap:wrap;gap:20px}
+}
+</style>
+
+<defs id="svg-icons">
+<symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></symbol>
+<symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></symbol>
+<symbol id="icon-hard-drive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.07 4H7.93a2 2 0 0 0-1.98 1.11z"></path><circle cx="6" cy="15" r="1"></circle><circle cx="18" cy="15" r="1"></circle></symbol>
+<symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></symbol>
+<symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></symbol>
+<symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></symbol>
+<symbol id="icon-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5-1.5-2-4-2-4L12 2l9.5 10.5s-1 2.5-2 4"></path><path d="M12 15v5m-3-2h6"></path></symbol>
+<symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></symbol>
+<symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></symbol>
+<symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></symbol>
+</defs>
+<style id="icon-styles">
+.icon { width: 24px; height: 24px; display: inline-block; vertical-align: middle; }
+.feat-icon .icon, .feat-icon-dark .icon, .trust-icon .icon { width: 100%; height: 100%; }
+.trust-item .icon { width: 24px; height: 24px; color: var(--cyan); }
+.feat-card .icon, .feat-card-dark .icon { color: var(--cyan); width: 32px; height: 32px; }
+.step-num .icon { color: #050B12; width: 16px; height: 16px; }
+.btn .icon { width: 18px; height: 18px; color: currentColor; }
+</style>
+
+<style id="how-works-bg">
+#how-it-works { background: linear-gradient(180deg, #fff 0%, #f7f8f5 100%); }
+.grid-2:has(> div:first-child > .section-label) { background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.5)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80&auto=format&fit=crop'); background-size: cover; background-position: right center; }
+</style>
+
+<style id="dark-patterns">
+.section-dark { background-image: 
+  radial-gradient(circle at 20% 50%, rgba(0,212,255,0.05) 0%, transparent 50%),
+  radial-gradient(circle at 80% 80%, rgba(0,230,184,0.03) 0%, transparent 50%);
+}
+.section-darker { background-image: 
+  radial-gradient(circle at 50% 0%, rgba(0,212,255,0.04) 0%, transparent 60%);
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <div class="nav-logo-mark">H½</div>
+      hosting4half
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#savings">Savings</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-outline btn-sm">Free Audit</a>
+      <a href="#contact" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+    <div class="nav-hamburger" onclick="document.querySelector('.nav-links').style.display='flex';document.querySelector('.nav-links').style.flexDirection='column';document.querySelector('.nav-links').style.position='fixed';document.querySelector('.nav-links').style.top='72px';document.querySelector('.nav-links').style.left='0';document.querySelector('.nav-links').style.right='0';document.querySelector('.nav-links').style.background='rgba(5,11,18,0.97)';document.querySelector('.nav-links').style.padding='24px'">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Free Hosting Audit — No Credit Card Required
+      </div>
+      <h1 class="hero-headline">
+        You're Probably <span class="gradient-text">Overpaying</span><br>For WordPress Hosting
+      </h1>
+      <p class="hero-sub">
+        We review your WordPress hosting bill for free. If we can't cut it in half, we'll tell you that too. No pitch. No fluff. Just the truth — and usually, the savings.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary btn-lg">Get My Free Audit →</a>
+        <a href="#how-it-works" class="btn btn-outline btn-lg">See How It Works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">40<span style="font-size:1.1rem">%+</span></span>
+          <span class="hero-stat-label">Average Savings</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">$0</span>
+          <span class="hero-stat-label">Audit Cost</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">48<span style="font-size:1.1rem">hr</span></span>
+          <span class="hero-stat-label">Turnaround</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">100<span style="font-size:1.1rem">%</span></span>
+          <span class="hero-stat-label">Honest Review</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="globe-wrap">
+        <!-- Orbital rings -->
+        <div class="orbit orbit-1"><div class="orbit-dot"></div></div>
+        <div class="orbit orbit-2"><div class="orbit-dot orbit-dot-teal"></div></div>
+        <div class="orbit orbit-3"></div>
+        <!-- Globe -->
+        <div class="globe-core">
+          <div class="globe-shine"></div>
+        </div>
+        <!-- Floating data pills -->
+        <div class="data-pill dp1">
+          <span class="dp-label">Monthly Bill</span>
+          <span class="dp-value">$120/mo → $60/mo</span>
+        </div>
+        <div class="data-pill dp2">
+          <span class="dp-label">Annual Savings</span>
+          <span class="dp-value">$720 saved ✓</span>
+        </div>
+        <div class="data-pill dp3">
+          <span class="dp-label">Uptime</span>
+          <span class="dp-value">99.99% SLA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-icon"><svg class="icon"><use xlink:href="#icon-shield"></use></svg></div>
+      US-Based Infrastructure
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg class="icon"><use xlink:href="#icon-zap"></use></svg></div>
+      WP Rocket Caching
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg class="icon"><use xlink:href="#icon-hard-drive"></use></svg></div>
+      All-in-One Backup
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg class="icon"><use xlink:href="#icon-globe"></use></svg></div>
+      Cloudflare CDN
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg class="icon"><use xlink:href="#icon-users"></use></svg></div>
+      White Glove Migration
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg class="icon"><use xlink:href="#icon-phone"></use></svg></div>
+      Free SEO Audit
+    </div>
+  </div>
+</div>
+
+
+<!-- HOW IT WORKS -->
+<section class="section-light section-pad" id="how-it-works">
+  <div class="container">
+    <div class="grid-2" style="gap:80px">
+      <div>
+        <div class="section-label section-label-dark">Process</div>
+        <h2 style="color:var(--text-dark);margin-bottom:20px">
+          Three Steps to <span style="color:#0891B2">Cut Your Bill</span>
+        </h2>
+        <p style="color:#6B7280;margin-bottom:40px;max-width:440px">We do the heavy lifting. You share your invoice, we do the forensics, and you decide what to do with the savings.</p>
+        <div style="display:flex;flex-direction:column;gap:28px">
+          <div class="step-row" style="--text-light:#111827;--text-muted:#6B7280">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4 style="color:#111827;font-size:1rem;font-weight:700;margin-bottom:6px">Share Your Hosting Invoice</h4>
+              <p style="color:#6B7280;font-size:0.9rem">Upload your current invoice or paste your hosting plan details. No logins, no passwords, no risk.</p>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4 style="color:#111827;font-size:1rem;font-weight:700;margin-bottom:6px">We Audit Your Setup</h4>
+              <p style="color:#6B7280;font-size:0.9rem">Our team reviews your plan against your actual traffic, storage, and performance needs within 48 hours.</p>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4 style="color:#111827;font-size:1rem;font-weight:700;margin-bottom:6px">Get Your Savings Report</h4>
+              <p style="color:#6B7280;font-size:0.9rem">You receive a plain-English breakdown: what you're paying for, what you don't need, and exactly what the right plan should cost.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:36px">
+          <a href="#contact" class="btn btn-primary">Start Free Audit →</a>
+        </div>
+      </div>
+      <div>
+        <!-- Dashboard mockup - light version -->
+        <div style="background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.1)">
+          <div style="background:#f1f5f9;padding:14px 20px;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;gap:8px">
+            <div style="width:10px;height:10px;border-radius:50%;background:#ef4444"></div>
+            <div style="width:10px;height:10px;border-radius:50%;background:#f59e0b"></div>
+            <div style="width:10px;height:10px;border-radius:50%;background:#22c55e"></div>
+            <span style="font-size:0.75rem;color:#94a3b8;margin-left:8px;font-family:monospace">hosting4half — Audit Report</span>
+          </div>
+          <div style="padding:28px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+              <span style="font-size:0.85rem;font-weight:600;color:#374151">Your Current Plan</span>
+              <span style="font-size:0.75rem;background:#fef2f2;color:#ef4444;padding:4px 10px;border-radius:20px;font-weight:600">Overpaying by 52%</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
+              <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px">
+                <div style="font-size:0.72rem;color:#94a3b8;margin-bottom:6px">Current Cost</div>
+                <div style="font-size:1.4rem;font-weight:800;color:#ef4444;font-family:'Space Grotesk',sans-serif">$120<span style="font-size:0.8rem;font-weight:400;color:#94a3b8">/mo</span></div>
+              </div>
+              <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:16px">
+                <div style="font-size:0.72rem;color:#94a3b8;margin-bottom:6px">Recommended</div>
+                <div style="font-size:1.4rem;font-weight:800;color:#16a34a;font-family:'Space Grotesk',sans-serif">$57<span style="font-size:0.8rem;font-weight:400;color:#94a3b8">/mo</span></div>
+              </div>
+            </div>
+            <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:16px;margin-bottom:16px;text-align:center">
+              <div style="font-size:0.78rem;color:#16a34a;font-weight:600;margin-bottom:4px">💰 Annual Savings</div>
+              <div style="font-size:2rem;font-weight:900;color:#15803d;font-family:'Space Grotesk',sans-serif">$756<span style="font-size:1rem;font-weight:400;color:#94a3b8">/year</span></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f1f5f9;font-size:0.82rem">
+                <span style="color:#374151">✅ Same uptime SLA</span>
+                <span style="color:#22c55e;font-weight:600">Kept</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f1f5f9;font-size:0.82rem">
+                <span style="color:#374151">✅ WP Rocket included</span>
+                <span style="color:#22c55e;font-weight:600">Added</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;font-size:0.82rem">
+                <span style="color:#374151">❌ Unused email addon</span>
+                <span style="color:#ef4444;font-weight:600">Removed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SECTION (LIGHT) -->
+<section class="section-light section-pad" id="features" style="background:#fff;border-top:1px solid #f1f5f9">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:64px">
+      <div class="section-label section-label-dark" style="justify-content:center">What's Included</div>
+      <h2 style="color:var(--text-dark);margin-bottom:16px">Everything You Need. <span style="color:#0891B2">Nothing You Don't.</span></h2>
+      <p style="max-width:540px;margin:0 auto;color:#6B7280">Every plan we recommend includes the full stack — performance, security, backup, and support. No upsells, no surprises.</p>
+    </div>
+    <div class="grid-3" style="margin-bottom:24px">
+      <div class="feat-card fade-up">
+        <div class="feat-icon"><svg class="icon"><use xlink:href="#icon-shield"></use></svg></div>
+        <h4>US-Based Infrastructure</h4>
+        <p>Your site hosted on US servers for fast load times and data compliance. Not some shared closet in Eastern Europe.</p>
+      </div>
+      <div class="feat-card fade-up" style="transition-delay:0.1s">
+        <div class="feat-icon"><svg class="icon"><use xlink:href="#icon-zap"></use></svg></div>
+        <h4>WP Rocket Caching</h4>
+        <p>The gold standard in WordPress performance. Included in every plan we recommend. $49/year value, free for you.</p>
+      </div>
+      <div class="feat-card fade-up" style="transition-delay:0.2s">
+        <div class="feat-icon"><svg class="icon"><use xlink:href="#icon-hard-drive"></use></svg></div>
+        <h4>All-in-One Backup</h4>
+        <p>Automated daily backups, 30-day retention. One-click restore. Sleep well knowing your site is safe.</p>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="feat-card fade-up">
+        <div class="feat-icon"><svg class="icon"><use xlink:href="#icon-globe"></use></svg></div>
+        <h4>Cloudflare CDN Support</h4>
+        <p>We configure Cloudflare for faster global delivery, DDoS protection, and SSL. Properly, not just a toggle.</p>
+      </div>
+      <div class="feat-card fade-up" style="transition-delay:0.1s">
+        <div class="feat-icon"><svg class="icon"><use xlink:href="#icon-users"></use></svg></div>
+        <h4>White Glove Migration</h4>
+        <p>We handle the entire migration to your new, cheaper host. Zero downtime. Zero headache. You just watch the savings land.</p>
+      </div>
+      <div class="feat-card fade-up" style="transition-delay:0.2s">
+        <div class="feat-icon"><svg class="icon"><use xlink:href="#icon-phone"></use></svg></div>
+        <h4>Free SEO Audit</h4>
+        <p>Every client gets a baseline SEO audit. Because fast hosting is useless if Google can't find you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SAVINGS CALCULATOR SECTION (DARK) -->
+<section class="section-dark section-pad" id="savings">
+  <div class="container">
+    <div class="grid-2" style="gap:80px">
+      <div>
+        <div class="section-label">Savings Calculator</div>
+        <h2 style="margin-bottom:20px">See What You Could <span class="accent">Save This Year</span></h2>
+        <p style="margin-bottom:40px;max-width:440px">Move the slider to your current monthly hosting cost. We'll show you what you should be paying — and what you could do with the difference.</p>
+        <div class="calc-wrap">
+          <div class="calc-label">
+            <span>Current monthly hosting cost</span>
+            <strong>$<span id="costDisplay">120</span>/mo</strong>
+          </div>
+          <div class="range-track-wrap">
+            <input type="range" class="range-track" id="costRange" min="10" max="500" value="120" step="5"
+              oninput="updateCalc(this.value)"
+              onmousedown="this.style.cursor='grabbing'"
+              onmouseup="this.style.cursor='grab'"
+              ontouchstart="updateCalc(this.value)"
+              ontouchmove="updateCalc(this.value)">
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-muted)">
+            <span>$10</span><span>$500</span>
+          </div>
+          <div class="calc-result">
+            <div class="calc-result-card">
+              <div class="cr-label">You Pay Now</div>
+              <div class="cr-val" id="monthly">$120<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
+            </div>
+            <div class="calc-result-card">
+              <div class="cr-label">After Audit</div>
+              <div class="cr-val highlight" id="newMonthly">$60<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
+            <div class="calc-result-card" style="background:rgba(0,230,184,0.06);border-color:rgba(0,230,184,0.2)">
+              <div class="cr-label">Monthly Saved</div>
+              <div class="cr-val" id="monthlySaved" style="color:var(--teal)">$60<span style="font-size:0.9rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
+            </div>
+            <div class="calc-result-card" style="background:rgba(0,230,184,0.06);border-color:rgba(0,230,184,0.2)">
+              <div class="cr-label">Annual Savings</div>
+              <div class="cr-val" id="annualSaved" style="color:var(--teal)">$720<span style="font-size:0.9rem;font-weight:400;color:var(--text-muted)">/yr</span></div>
+            </div>
+          </div>
+          <div class="savings-note" id="savingsNote">
+            <span id="savingsNoteText">That's enough to cover your domain, grab coffee for the team, and feel smug about it — every year. ☕</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Infrastructure</div>
+        <h2 style="margin-bottom:20px">Managed WordPress <span class="accent">Done Right</span></h2>
+        <p style="margin-bottom:36px">Most overpriced hosting plans charge for features you never use. We match you to a plan that fits your actual traffic, storage, and support needs.</p>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div class="feat-card-dark">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
+              <div class="feat-icon-dark"><svg class="icon"><use xlink:href="#icon-rocket"></use></svg></div>
+              <h4>LiteSpeed + NVMe SSD</h4>
+            </div>
+            <p style="font-size:0.9rem">Faster than Apache or Nginx on traditional hard drives. Your site loads in under 1 second. Google notices.</p>
+          </div>
+          <div class="feat-card-dark">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
+              <div class="feat-icon-dark">🔒</div>
+              <h4>SSL, Malware Scanning & WAF</h4>
+            </div>
+            <p style="font-size:0.9rem">Free SSL, daily malware scans, and a Web Application Firewall out of the box. Not a $20/month addon.</p>
+          </div>
+          <div class="feat-card-dark">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
+              <div class="feat-icon-dark">📞</div>
+              <h4>24/7 WordPress-Aware Support</h4>
+            </div>
+            <p style="font-size:0.9rem">Real humans who know WordPress, not a tier-1 ticket queue that tells you to disable your plugins.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS SECTION (DARK) -->
+<section style="background:var(--dark-1);padding:64px 0;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)">
+  <div class="container">
+    <div class="grid-4">
+      <div class="stat-block fade-up">
+        <div class="stat-num" style="color:var(--cyan)">40<span>%+</span></div>
+        <div class="stat-label">Average Bill Reduction</div>
+      </div>
+      <div class="stat-block fade-up" style="transition-delay:0.1s">
+        <div class="stat-num">$0</div>
+        <div class="stat-label">Cost of the Audit</div>
+      </div>
+      <div class="stat-block fade-up" style="transition-delay:0.2s">
+        <div class="stat-num" style="color:var(--teal)">48<span style="font-size:1.5rem">hr</span></div>
+        <div class="stat-label">Audit Turnaround</div>
+      </div>
+      <div class="stat-block fade-up" style="transition-delay:0.3s">
+        <div class="stat-num">99<span>%</span></div>
+        <div class="stat-label">Client Satisfaction Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DARK BENEFITS SECTION -->
+<section class="section-dark section-pad">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:64px">
+      <div class="section-label" style="justify-content:center">Why hosting4half</div>
+      <h2 style="margin-bottom:16px">We Only Win <span class="accent">When You Save</span></h2>
+      <p style="max-width:540px;margin:0 auto">No retainer. No monthly fee. We're paid only when we move you to a better plan. Our incentive is your savings.</p>
+    </div>
+    <div class="grid-3">
+      <div class="feat-card-dark fade-up text-center" style="padding:40px 32px">
+        <div class="feat-icon-dark" style="margin:0 auto 20px;width:56px;height:56px;font-size:1.5rem">💯</div>
+        <h4>Brutally Honest</h4>
+        <p style="font-size:0.9rem;margin-top:10px">If your hosting is already correctly priced, we'll tell you. No sales pressure, no upsell, no regrets.</p>
+      </div>
+      <div class="feat-card-dark fade-up text-center" style="padding:40px 32px;transition-delay:0.1s;border-color:rgba(0,212,255,0.3);box-shadow:0 0 30px rgba(0,212,255,0.08)">
+        <div class="feat-icon-dark" style="margin:0 auto 20px;width:56px;height:56px;font-size:1.5rem;background:rgba(0,212,255,0.12);border-color:rgba(0,212,255,0.3)">🔍</div>
+        <h4>Deep Forensic Review</h4>
+        <p style="font-size:0.9rem;margin-top:10px">We dig into your plan: bandwidth, storage, PHP workers, support tier, and addons. Most overcharges hide in the details.</p>
+      </div>
+      <div class="feat-card-dark fade-up text-center" style="padding:40px 32px;transition-delay:0.2s">
+        <div class="feat-icon-dark" style="margin:0 auto 20px;width:56px;height:56px;font-size:1.5rem"><svg class="icon"><use xlink:href="#icon-rocket"></use></svg></div>
+        <h4>Zero-Downtime Migration</h4>
+        <p style="font-size:0.9rem;margin-top:10px">We migrate your site to the leaner plan ourselves. DNS flipped, site tested, backup confirmed — before we touch anything live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / AUDIT FORM SECTION -->
+<section class="section-light section-pad" id="contact">
+  <div class="container">
+    <div class="grid-2" style="gap:80px">
+      <div>
+        <div class="section-label section-label-dark">Get Started</div>
+        <h2 style="color:var(--text-dark);margin-bottom:20px">Get Your <span style="color:#0891B2">Free Audit</span> in 48 Hours</h2>
+        <p style="color:#6B7280;margin-bottom:32px;max-width:440px">Fill out the form and upload your current hosting invoice. We'll review everything and send you a clear, no-nonsense report within 48 hours. Zero commitment on your end.</p>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#00D4FF,#00E6B8);display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:#050B12;font-weight:800;flex-shrink:0">✓</div>
+            <div>
+              <div style="font-weight:600;color:#111827;font-size:0.95rem">No credit card required</div>
+              <div style="color:#6B7280;font-size:0.85rem">The audit is completely free, no strings attached</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#00D4FF,#00E6B8);display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:#050B12;font-weight:800;flex-shrink:0">✓</div>
+            <div>
+              <div style="font-weight:600;color:#111827;font-size:0.95rem">No login access needed</div>
+              <div style="color:#6B7280;font-size:0.85rem">Just your invoice or plan details</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#00D4FF,#00E6B8);display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:#050B12;font-weight:800;flex-shrink:0">✓</div>
+            <div>
+              <div style="font-weight:600;color:#111827;font-size:0.95rem">Honest result — good or bad</div>
+              <div style="color:#6B7280;font-size:0.85rem">If you're not overpaying, we'll say so</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:40px;box-shadow:0 8px 40px rgba(0,0,0,0.08)">
+          <h3 style="color:var(--text-dark);margin-bottom:24px;font-size:1.25rem">Request Free Hosting Audit</h3>
+          <form id="auditForm" onsubmit="handleSubmit(event)">
+            <div class="form-row" style="--text-muted:#6B7280;--text-light:#111827">
+              <div class="form-field">
+                <label style="color:#374151">First Name *</label>
+                <input type="text" placeholder="Anthony" style="background:#f8fafc;border:1.5px solid #e2e8f0;color:#111827" required>
+              </div>
+              <div class="form-field">
+                <label style="color:#374151">Last Name *</label>
+                <input type="text" placeholder="Idi" style="background:#f8fafc;border:1.5px solid #e2e8f0;color:#111827" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label style="color:#374151">Email Address *</label>
+              <input type="email" placeholder="you@example.com" style="background:#f8fafc;border:1.5px solid #e2e8f0;color:#111827" required>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label style="color:#374151">Current Monthly Cost</label>
+                <input type="text" placeholder="e.g. $120/mo" style="background:#f8fafc;border:1.5px solid #e2e8f0;color:#111827">
+              </div>
+              <div class="form-field">
+                <label style="color:#374151">Hosting Provider</label>
+                <select style="background:#f8fafc;border:1.5px solid #e2e8f0;color:#111827">
+                  <option value="">Select provider</option>
+                  <option>WP Engine</option>
+                  <option>Kinsta</option>
+                  <option>Flywheel</option>
+                  <option>SiteGround</option>
+                  <option>Bluehost</option>
+                  <option>GoDaddy Managed WP</option>
+                  <option>Cloudways</option>
+                  <option>Pressable</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label style="color:#374151">Upload Invoice / Plan Screenshot</label>
+              <div class="upload-zone" style="position:relative">
+                <input type="file" accept=".pdf,.png,.jpg,.jpeg,.webp" id="invoiceFile">
+                <div class="upload-icon">📄</div>
+                <p>Click to upload or drag & drop<br><span style="color:#94a3b8;font-size:0.78rem">PDF, PNG, JPG up to 10MB</span></p>
+                <div id="fileName" style="margin-top:8px;font-size:0.8rem;color:#0891B2;display:none"></div>
+              </div>
+            </div>
+            <div class="form-field">
+              <label style="color:#374151">Anything else we should know?</label>
+              <textarea rows="3" placeholder="e.g. We have 3 WordPress sites, all with e-commerce..." style="background:#f8fafc;border:1.5px solid #e2e8f0;color:#111827"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px">
+              Send My Audit Request →
+            </button>
+          </form>
+          <div id="formSuccess" style="display:none;text-align:center;padding:32px 0">
+            <div style="font-size:3rem;margin-bottom:12px">✅</div>
+            <h4 style="color:#111827;margin-bottom:8px">Audit Request Received!</h4>
+            <p style="color:#6B7280;font-size:0.9rem">We'll review your invoice and send your savings report within 48 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ SECTION (DARK) -->
+<section class="section-dark section-pad" id="faq">
+  <div class="container" style="max-width:800px">
+    <div style="text-align:center;margin-bottom:56px">
+      <div class="section-label" style="justify-content:center">FAQ</div>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How is the audit completely free?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">We're compensated by hosting providers when we recommend and migrate clients to their platforms — similar to how a mortgage broker is paid by the lender, not the borrower. That means our audit costs you nothing, and we only recommend plans that genuinely save you money.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What if I'm already on a good plan?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">We'll tell you. Honestly. If your current hosting is appropriately priced for your needs, we'll say so in your report and you can move on with your day. We'd rather be straight with you than push an unnecessary switch just to earn a commission.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What information do I need to share?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Just your current invoice or a screenshot of your hosting plan page. We don't need login credentials, passwords, or access to your WordPress dashboard. The plan details alone are enough for us to do the full forensic review.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How long does migration take?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Most migrations complete within 24–48 hours, including setup, testing, and DNS propagation. We stage the new site, verify everything works correctly, then flip DNS. Your live site stays untouched until the new one is confirmed working.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What happens to my email if I switch hosts?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Good question. We handle email separately — we'll either keep your email on your current provider (if it's separate), migrate it to Google Workspace, or set it up with a dedicated email host. We never cut email during a migration without a tested backup route in place.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Will switching hosts affect my SEO?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">A properly executed migration has zero SEO impact. We check redirects, canonicals, sitemaps, and Google Search Console after every migration. In most cases, moving to faster infrastructure actually improves your Core Web Vitals — which Google uses as a ranking signal.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          I have multiple WordPress sites. Can you audit all of them?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Absolutely. Multi-site audits are a specialty. Hosting companies love to bundle multiple sites on expensive managed plans when a simple multisite install or a well-configured VPS could handle them for a fraction of the price. Mention it in the notes field when you submit.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div class="hero-orbs" style="opacity:0.5">
+    <div class="orb" style="width:500px;height:500px;background:radial-gradient(circle,rgba(0,212,255,0.4),transparent 70%);top:-200px;right:0;animation:orbFloat 14s ease-in-out infinite"></div>
+    <div class="orb" style="width:400px;height:400px;background:radial-gradient(circle,rgba(0,230,184,0.3),transparent 70%);bottom:-150px;left:0;animation:orbFloat 18s ease-in-out infinite reverse"></div>
+  </div>
+  <div class="container" style="position:relative;z-index:2">
+    <div style="text-align:center;max-width:700px;margin:0 auto">
+      <div class="hero-badge" style="margin:0 auto 28px;font-size:0.78rem">
+        <span class="hero-badge-dot"></span>
+        No commitment. No credit card. No nonsense.
+      </div>
+      <h2 style="margin-bottom:20px;font-size:clamp(2rem,5vw,3.8rem)">
+        Stop Overpaying.<br><span class="gradient-text">Start Saving Today.</span>
+      </h2>
+      <p style="font-size:1.05rem;color:rgba(255,255,255,0.6);max-width:520px;margin:0 auto 40px;line-height:1.75">
+        The average client saves $720/year after their first audit. Takes 5 minutes to submit. Results in 48 hours. The only question is why you haven't done it yet.
+      </p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-primary btn-lg">Get My Free Audit →</a>
+        <a href="#how-it-works" class="btn btn-outline btn-lg">See How It Works</a>
+      </div>
+      <p style="margin-top:28px;font-size:0.82rem;color:rgba(255,255,255,0.35)">
+        Completely free. No strings. Honest report within 48 hours.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="footer-logo" href="#">
+          <div class="footer-lm">H½</div>
+          hosting4half
+        </a>
+        <p class="footer-desc">We audit WordPress hosting bills and cut them in half. Free forensic review, zero commitment, honest results.</p>
+        <div style="display:flex;gap:12px">
+          <a href="#" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:0.85rem;text-decoration:none;transition:var(--transition)" onmouseover="this.style.borderColor='var(--cyan)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">𝕏</a>
+          <a href="#" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:0.85rem;text-decoration:none;transition:var(--transition)" onmouseover="this.style.borderColor='var(--cyan)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#savings">Savings Calculator</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">WordPress Hosting Guide</a></li>
+          <li><a href="#">Speed Optimization</a></li>
+          <li><a href="#">Migration Checklist</a></li>
+          <li><a href="#">SEO Basics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 hosting4half.com. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// ============================================================
+// CALCULATOR
+// ============================================================
+function updateCalc(val) {
+  val = parseInt(val);
+  const pct = ((val - 10) / (500 - 10)) * 100;
+  document.getElementById('costDisplay').textContent = val;
+  document.getElementById('monthly').innerHTML = '$' + val + '<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span>';
+  
+  const newMonthly = Math.round(val * 0.5);
+  const monthlySaved = val - newMonthly;
+  const annualSaved = monthlySaved * 12;
+  
+  document.getElementById('newMonthly').innerHTML = '$' + newMonthly + '<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span>';
+  document.getElementById('monthlySaved').innerHTML = '$' + monthlySaved + '<span style="font-size:0.9rem;font-weight:400;color:var(--text-muted)">/mo</span>';
+  document.getElementById('annualSaved').innerHTML = '$' + annualSaved.toLocaleString() + '<span style="font-size:0.9rem;font-weight:400;color:var(--text-muted)">/yr</span>';
+  
+  // Update range track gradient
+  const range = document.getElementById('costRange');
+  range.style.setProperty('--pct', pct + '%');
+  range.style.background = 'linear-gradient(to right, #00D4FF ' + pct + '%, rgba(255,255,255,0.1) ' + pct + '%)';
+  
+  // Savings notes
+  const notes = [
+    [0, 239, "That's enough to renew your domain, get a nice dinner, and still feel smug about it — every single year. 🍷"],
+    [240, 479, "AMOUNT per year — a gaming console, a weekend trip, or 6 months of project management tools. Not bad for a hosting swap. 🎮"],
+    [480, 719, "AMOUNT per year. That's a new MacBook fund, a team party budget, or a real marketing push. All from just moving hosts. <svg class="icon"><use xlink:href="#icon-hard-drive"></use></svg>"],
+    [720, 1199, "AMOUNT per year. A serious chunk of change — enough to hire a part-time contractor for a month. Hosting savings hitting different. <svg class="icon"><use xlink:href="#icon-rocket"></use></svg>"],
+    [1200, 2399, "AMOUNT per year. You're leaving serious money on the table. That's an international trip or a full-month sprint with a developer. ✈️"],
+    [2400, 999999, "AMOUNT per year. At this level, you should have called us yesterday. That's agency-tier savings. 💰"]
+  ];
+  
+  const txt = document.getElementById('savingsNoteText');
+  for (const [min, max, msg] of notes) {
+    if (annualSaved >= min && annualSaved <= max) {
+      txt.textContent = msg.replace('AMOUNT', '$' + annualSaved.toLocaleString());
+      break;
+    }
+  }
+}
+
+// Init on load
+document.addEventListener('DOMContentLoaded', function() {
+  updateCalc(120);
+  
+  // Touch support for range slider
+  const range = document.getElementById('costRange');
+  if (range) {
+    range.addEventListener('input', e => updateCalc(e.target.value));
+    range.addEventListener('touchmove', e => { e.preventDefault(); updateCalc(e.target.value); }, {passive: false});
+  }
+  
+  // File upload label
+  const fileInput = document.getElementById('invoiceFile');
+  if (fileInput) {
+    fileInput.addEventListener('change', function() {
+      const fn = document.getElementById('fileName');
+      if (fn && this.files[0]) { fn.textContent = '📎 ' + this.files[0].name; fn.style.display = 'block'; }
+    });
+  }
+});
+
+// ============================================================
+// FAQ TOGGLE
+// ============================================================
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// ============================================================
+// FORM SUBMIT (stub)
+// ============================================================
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('auditForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+
+// ============================================================
+// SCROLL FADE-IN
+// ============================================================
+const fadeObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
+
+// ============================================================
+// NAV SCROLL EFFECT
+// ============================================================
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.nav');
+  if (window.scrollY > 50) {
+    nav.style.background = 'rgba(5,11,18,0.97)';
+    nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.3)';
+  } else {
+    nav.style.background = 'rgba(5,11,18,0.88)';
+    nav.style.boxShadow = 'none';
+  }
+});
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"a6e2401b5d68440e887dee39f1e31ff3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
